@@ -10,7 +10,7 @@ public static class Globals
     public static int DNA_SIZE = 10;
     public static Random rnd = new Random();
 }
-namespace ConsoleApplication1
+namespace Evolution
 {
     class Program
     {
@@ -28,7 +28,7 @@ namespace ConsoleApplication1
                 Life.Mating(Humanity.PopList[0], Humanity.PopList[1], Humanity);
             }
 
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i < 10; i++) {
                 Life.Fight(Humanity);
                 int pick = Globals.rnd.Next(1,Humanity.PopList.Count());
                 if (pick == 0)
