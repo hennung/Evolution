@@ -28,14 +28,13 @@ namespace Evolution
                 Life.Mating(Humanity.PopList[0], Humanity.PopList[1], Humanity);
             }
 
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 10000; i++) {
                 Life.Fight(Humanity);
                 int pick = Globals.rnd.Next(1,Humanity.PopList.Count());
                 if (pick == 0)
                     pick +=1;
                 Life.Mating(Humanity.PopList[pick],Humanity.PopList[pick-1],Humanity);
             }
-            Life.Fight(Humanity);
             foreach (Genome unit in Humanity.PopList)
             {
                 unit.print();
